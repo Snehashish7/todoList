@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "author": "Snehashish Ghosh",
   "license": "ISC",
@@ -17,6 +17,6 @@
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "mongoose": "^6.2.3"
+    "mongoose": "^6.2.7"
   }
 }
