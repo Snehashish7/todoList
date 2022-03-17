@@ -2,10 +2,10 @@
   "name": "5.ejs",
   "version": "1.0.0",
   "description": "Create a ToDo list",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node app/app.js"
   },
   "author": "Snehashish Ghosh",
   "license": "ISC",
