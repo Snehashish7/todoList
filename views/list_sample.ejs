@@ -1,0 +1,30 @@
+<!-- Base template for our EJS file. Inside this EJS file we write HTML code.
+    Anything valid for HTML is valid for EJS file.
+    We can take logic from Javascript and apply here(unlike HTML where reverse happens)
+    (We will send current date from JS to EJS) 
+
+    WE SHOULDN'T DO MUCH CODE IN EJS FILE. Since at the end it is a content(HTML) file.
+     -->
+     
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <!-- (below symbol) <= marker to tell where to store a particular variable from JS -->
+    <%if(KindofDay == "Saturday" || KindofDay == "Sunday"){%>
+    <!-- YESS!! We can code here but we have to apply the symbols before and after every line of code(not HTML)-->
+    <h1><%=KindofDay%>To Do List</h1> <!-- we will pass the day from js to here -->
+    <%}else{%>
+        <h1><%=KindofDay%>To Do List</h1>
+    <%}%> 
+</body>
+
+</html>

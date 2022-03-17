@@ -1,0 +1,37 @@
+<!-- When express(our server) loads up it only runs the main in package.json and the views folder -->
+<!-- Therefore we have to serve our css file rather than leaving it static. -->
+<!-- **To do this we have to create a public folder where we can put all our static 
+     resources inside the public folder. Also write this in JS -> app.use(express.static("public"))-->
+
+<%- include("header") %>
+
+
+    <div class ="box" id ="heading">
+        <h1><%=KindofDay%></h1>
+    </div>
+    
+    <div class = "box">
+        <!-- <li>Buy Food</li> We will add these in the array itself(in app.js) so that our code looks smarter
+        <li>Cook Food</li>
+        <li>Eat Food</li> -->
+        <%for(var i = 0;i < items_length; i++){%> <!-- every time we add a list and not update the same list over and over again -->
+            <form action = "/delete" method = "post">
+                <div class ="item">
+                    <input type="checkbox" name ="checkbox" value = <%=newListItem[i]._id%> onChange="this.form.submit()">
+                    <p><%= newListItem[i].name %></p><!-- this symbol is for values(i can't write the symbol in comment) -->
+                </div>
+                <input type="hidden" name = "newRouteName" value = <%=KindofDay%>> <!-- To get the name of the requested port -->
+            </form>
+        <%}%> <!-- this symbol is for code -->
+
+        <form action="/" method="post" class ="item">
+            <input type="text" name = "new_item" placeholder= "New Item" autocomplete="off"><br>
+            <button type="submit" name = "list" value = <%=KindofDay%>>+</button>
+        </form>
+    </div>
+    
+
+
+<%- include("footer") %>
+
+</html>
